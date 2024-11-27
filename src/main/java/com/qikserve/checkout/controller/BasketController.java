@@ -20,11 +20,13 @@
         private final BasketService basketService;
 
         @GetMapping("/{id}")
+        @JsonView(Basket.Views.Read.class)
         public ResponseEntity<Basket> getBasket(@PathVariable("id") Long id){
             return ResponseEntity.of(basketService.getBasket(id));
         }
 
         @PostMapping
+        @JsonView(Basket.Views.Created.class)
         public ResponseEntity<Basket> createBasket() {
             var basket = basketService.createBasket();
             return ResponseEntity.created(URI.create("/baskets/" + basket.getId().toString()))
@@ -32,8 +34,9 @@
         }
 
         @PostMapping("/{id}/item")
+        @JsonView(BasketItem.Views.Created.class)
         public ResponseEntity<BasketItem> addBasketItem(@PathVariable("id") Long id,
-                                                        @RequestBody BasketItem basketItem){
+                                                        @RequestBody @JsonView(BasketItem.Views.Create.class) BasketItem basketItem){
             var item = basketService.addBasketItem(basketItem.withBasketId(id));
             return ResponseEntity.created(URI.create( "/basketItems/" + item.getId().toString()))
                     .body(item);
@@ -58,6 +61,7 @@
         }
 
         @PostMapping("/{id}/checkout")
+        @JsonView({Basket.Views.Read.class})
         public ResponseEntity<Basket> checkoutBasket(@PathVariable("id") Long id){
                 Basket finishedBasket = basketService.checkout(id);
                 return ResponseEntity.ok(finishedBasket);
