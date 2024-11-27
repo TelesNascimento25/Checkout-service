@@ -90,4 +90,4 @@ The Swagger UI documentation can be accessed at the following URL:
 
 ## 6. JAVA API HOSTED Swagger
 Link to the Swagger - Api hosted
-[https://5eb4-2804-29b8-518c-3eea-14f5-653-d8b5-8552.ngrok-free.app/swagger-ui/index.html](https://5eb4-2804-29b8-518c-3eea-14f5-653-d8b5-8552.ngrok-free.app/swagger-ui/index.html).
+[https://927497e1b5cb5e369a1d7e2e2863c9e6.serveo.net/swagger-ui/index.html](https://927497e1b5cb5e369a1d7e2e2863c9e6.serveo.net/swagger-ui/index.html).
