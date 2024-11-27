@@ -35,7 +35,7 @@ I interpreted the API as a middleware layer between the frontend and backend, re
 
 MUST Have: The Java API consuming the WireMock data and handling promotions was implemented, along with automated unit and integration tests.
 
-SHOULD Have: Link to the java api hosted(http://3d42-2804-29b8-518c-3eea-14f5-653-d8b5-8552.ngrok-free.app/swagger-ui/index.html#) (exceptions have internationalization implemented).
+SHOULD Have: Link to the java api hosted (at readme.md)(exceptions have internationalization implemented).
 
 COULD Have: Multi-tenancy with different WireMock instances was implemented.  
 
